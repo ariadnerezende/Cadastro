@@ -11,16 +11,16 @@
 
     <TextView
         android:id="@+id/cadastro"
-        android:layout_width="364dp"
+        android:layout_width="501dp"
         android:layout_height="47dp"
-        android:background="@color/purple"
-        android:paddingBottom="8dp"
+        android:background="#5C31A8"
+        android:padding="6dp"
         android:text="Cadastro"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/nome"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,12 +57,13 @@
 
     <EditText
         android:id="@+id/campo_tel"
-        android:layout_width="387dp"
-        android:layout_height="40dp"
+        android:layout_width="412dp"
+        android:layout_height="35dp"
         android:layout_marginTop="8dp"
         android:background="@android:drawable/edit_text"
         android:hint="Ex: 12-93456-7890"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tel" />
 
@@ -70,10 +71,11 @@
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="E-mail"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/campo_tel" />
 
@@ -119,15 +121,15 @@
 
         <RadioButton
             android:id="@+id/masculino"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="9dp"
+            android:layout_height="31dp"
             android:layout_weight="1"
             android:checked="true"
             android:text="Masculino" />
 
         <RadioButton
             android:id="@+id/feminino"
-            android:layout_width="0dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Feminino" />
@@ -174,28 +176,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/uf" />
 
-    <Button
-        android:id="@+id/limparBt"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/limpar"
-        android:textColor="@color/white"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/salvarBt"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inicialSp"
-        app:layout_constraintVertical_bias="0.504" />
+        app:layout_constraintVertical_bias="0.206"
+        tools:layout_editor_absoluteX="6dp">
 
-    <Button
-        android:id="@+id/salvarBt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/purple"
-        android:text="@string/salvar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/limparBt"
-        app:layout_constraintTop_toBottomOf="@id/inicialSp" />
+        <Button
+            android:id="@+id/limparBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/purple"
+            android:text="@string/limpar"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/salvarBt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@color/purple"
+            android:text="@string/salvar"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

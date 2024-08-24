@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         amb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(amb.root)
 
-        amb.inicialSp.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+        amb.inicialSp.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?,
