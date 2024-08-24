@@ -43,7 +43,12 @@ class MainActivity : AppCompatActivity() {
             val uf = amb.inicialSp.selectedItem.toString()
 
             val formulario = Formulario(nome, telefone, email, ingressoListaEmail, sexo, cidade, uf)
-            Toast.makeText(this, formulario.toString(), Toast.LENGTH_LONG).show()
+
+            amb.toastText.text = formulario.toString()
+            amb.toastContainer.visibility = View.VISIBLE
+            amb.toastContainer.postDelayed({
+                amb.toastContainer.visibility = View.GONE
+            }, 15000)
         }
 
         amb.limparBt.setOnClickListener {
